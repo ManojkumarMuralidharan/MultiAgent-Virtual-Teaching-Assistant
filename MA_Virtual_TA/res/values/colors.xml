@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- <drawable name="red">#7f00</drawable>  -->
+
+	<color name="message_standard">#000000</color>
+    <color name="message_focused">#333333</color>
+
+</resources>

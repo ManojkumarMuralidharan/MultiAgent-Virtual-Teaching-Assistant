@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:text="Virtual TA - Recent Exam Results"
+        android:textStyle="bold" android:gravity="center"
+        android:layout_margin="5px" android:paddingTop="20px"/>
+    
+    <View android:layout_height="2dip" android:background="#FF909090" android:layout_width="fill_parent" />
+
+    <TableLayout android:layout_gravity="fill_horizontal" android:layout_width="fill_parent" android:id="@+id/RecentExamsTable" android:paddingTop="10px" android:padding="10px" android:layout_height="wrap_content">
+
+        <TableRow android:id="@+id/RecentExamRow" android:background="@color/recent_exams" android:visibility="gone"></TableRow>
+        
+
+        <TableRow android:id="@+id/RecentExamHeader" android:clickable="false" android:layout_height="wrap_content" android:layout_gravity="fill_horizontal" android:layout_width="fill_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#" android:layout_marginRight="15px"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Date" android:layout_marginRight="10px" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your Score" android:layout_marginRight="10px" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Average Score" android:layout_marginRight="10px" />
+        </TableRow>
+<!--
+        <TableRow android:clickable="true" android:layout_height="wrap_content" android:layout_gravity="fill_horizontal" android:layout_width="fill_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:layout_marginRight="15px"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="02/01/2010" android:layout_marginRight="15px" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="90%" android:layout_marginRight="15px" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="80%" android:layout_marginRight="15px" />
+        </TableRow>
+
+        <TableRow android:clickable="true" android:layout_height="wrap_content" android:layout_gravity="fill_horizontal" android:layout_width="fill_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2" android:layout_marginRight="15px"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="02/24/2010" android:layout_marginRight="10px" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="74%" android:layout_marginRight="10px" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="88%" android:layout_marginRight="10px" />
+        </TableRow>
+-->
+    </TableLayout>
+
+    <View android:layout_height="2dip" android:background="#FF909090" android:layout_width="fill_parent" />
+
+    <LinearLayout android:id="@+id/LinearLayout02"
+        android:orientation="horizontal" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_gravity="bottom" android:layout_marginBottom="5px" android:layout_height="fill_parent">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:clickable="true"
+            android:text="Start" android:id="@+id/StartExamButton" android:layout_gravity="bottom" android:layout_marginRight="5px">
+        </Button>
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:clickable="true"
+            android:text="Quit" android:id="@+id/QuitExamButton" android:layout_gravity="bottom" android:layout_marginLeft="5px">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

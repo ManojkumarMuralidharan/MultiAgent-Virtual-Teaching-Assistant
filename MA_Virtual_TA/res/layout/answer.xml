@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView android:id="@+id/QuestionNumberResult" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:text="Question #?? (Result)"
+        android:textStyle="bold" android:gravity="center" android:paddingTop="3px"/>
+    
+    <View android:layout_height="2dip" android:background="#FF909090" android:layout_width="fill_parent" />
+
+    <TableLayout android:layout_gravity="fill_horizontal" android:layout_width="fill_parent" android:id="@+id/AnswersTable" android:layout_height="50px" android:padding="5px">
+        <TableRow android:layout_height="wrap_content" android:layout_gravity="fill_horizontal" android:layout_width="fill_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your Answer:" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""
+                android:id="@+id/YourAnswer" android:layout_marginLeft="5px" />
+        </TableRow>
+        <TableRow android:layout_height="wrap_content" android:layout_gravity="fill_horizontal" android:layout_width="fill_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Correct Answer:" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" 
+                android:id="@+id/CorrectAnswer" android:layout_marginLeft="5px" />
+        </TableRow>
+    </TableLayout>
+
+    <View android:layout_height="2dip" android:background="#FF909090" android:layout_width="fill_parent" />
+
+    <TableLayout android:id="@+id/StatisticsTable" android:layout_gravity="fill_horizontal" android:layout_width="fill_parent" android:layout_height="50px" android:padding="5px">
+        <TableRow android:layout_height="wrap_content" android:layout_gravity="fill_horizontal" android:layout_width="fill_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="National Average:" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""
+                android:id="@+id/NationalAverage" android:layout_marginLeft="5px" />
+        </TableRow>
+        <TableRow android:layout_height="wrap_content" android:layout_gravity="fill_horizontal" android:layout_width="fill_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Question Difficulty:" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" 
+                android:id="@+id/QuestionDifficulty" android:layout_marginLeft="5px" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView android:id="@+id/StatisticsUnavailable" android:layout_width="fill_parent" android:layout_height="50px" android:text="No Statistics Given." android:gravity="center" android:visibility="gone"/>
+
+    <View android:layout_height="2dip" android:background="#FF909090" android:layout_width="fill_parent" />
+
+    <include android:id="@+id/TAContent" layout="@layout/vta_answer" />
+    <TextView android:id="@+id/TAContentUnavailable" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="85px" android:text="The TA is unavailable during the exam." android:gravity="center"/>
+
+    <View android:layout_height="2dip" android:background="#FF909090" android:layout_width="fill_parent" />
+
+    <LinearLayout android:orientation="horizontal" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingTop="3px">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:clickable="true"
+            android:text="Next Question" android:id="@+id/NextButton" android:layout_gravity="bottom">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

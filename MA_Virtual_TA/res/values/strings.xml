@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, StartExam!</string>
+    <string name="app_name">Multiagent_Virtual_TA</string>
+    
+    <string name="activity_local_jade_controller">Jade Controller</string>
+    
+    
+    <!--  ERROR MESSAGES -->
+    <string name="error_msg_empty_aid">AID name cannot be empty!</string>
+    <string name="error_msg_stale_proxy">Error getting Jade agent proxy</string>
+    <string name="error_msg_connect">Error connecting to Android MicroRuntime Service</string>
+	<string name="error_msg_generic">Generic error contacting Jade platform</string>
+	
+	
+	<string name="statusbar_msg_connected">Connected to service</string>
+	<string name="notify_msg_received">A message has arrived</string>
+
+    
+
+	
+	<!-- JADE CONNECTION PROPERTIES -->
+	<string name="host">152.14.92.65</string>
+	<string name="port">1097</string>
+	<string name="msisdn">unityId1</string>
+	<string name="all_msisdn">unityId1,unityId2</string>
+	
+</resources>

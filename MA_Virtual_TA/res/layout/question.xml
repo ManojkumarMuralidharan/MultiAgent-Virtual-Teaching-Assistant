@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView android:id="@+id/QuestionNumber" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:text="Question #??"
+        android:textStyle="bold" android:gravity="center" android:paddingTop="3px"/>
+    
+    <View android:layout_height="2dip" android:background="#FF909090" android:layout_width="fill_parent" />
+
+    <WebView android:id="@+id/QuestionView" android:layout_width="fill_parent" android:layout_height="180px"/>
+
+    <View android:layout_height="2dip" android:background="#FF909090" android:layout_width="fill_parent" />
+
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+    <RadioGroup android:id="@+id/AnswerRadioGroup" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="left|center_vertical" android:paddingRight="20px">
+        <RadioButton android:text="A" android:id="@+id/AnswerA" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginLeft="10px"/>
+        <RadioButton android:text="B" android:id="@+id/AnswerB" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginLeft="30px"/>
+        <RadioButton android:text="C" android:id="@+id/AnswerC" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginLeft="30px"/>
+        <RadioButton android:text="D" android:id="@+id/AnswerD" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginLeft="30px"/>
+        <RadioButton android:text="E" android:id="@+id/AnswerE" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginLeft="30px" android:layout_marginRight="10px"/>
+    </RadioGroup>
+
+        <Button android:layout_width="wrap_content" android:layout_gravity="center"
+            android:layout_height="wrap_content" android:clickable="true"
+            android:text="Answer" android:id="@+id/AnswerButton">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

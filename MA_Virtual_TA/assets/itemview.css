@@ -1,0 +1,332 @@
+/*
+	system image should store under css/images directory, 
+
+    images include:
+	addlines.gif, q.gif, a.gif, yesno.gif, LTARROW.gif
+
+	user can redefine it as need.
+*/
+
+.nqt-item-content {
+	margin: 2px 2px;
+}
+.item-body img {
+	vertical-align: middle;
+}
+.nqt-item-content .item-body {
+	clear: both;
+}
+/* 
+	perdefine padding and margin in general under item-body
+	including: header, stem, footer, part, with-equipment, p
+*/
+.item-body p {
+	margin: 0.6em 0px 0.6em 0px;
+}
+.item-body .mc p {
+	margin: 0px;
+}
+.item-body .question-header
+{
+	padding: 0px;
+}
+.item-body .question-stem,
+.item-body .question-footer,
+.item-body .question-part,
+.item-body .answer-lines,
+.item-body .with-equipment,
+.item-body .oe-mc-type
+{
+	padding: 0px 0px 0px 22px;
+	margin: 0.6em 0px 0px 0px;
+}
+.item-body .question-stem
+{
+	border: 0px solid red;
+}
+.item-body .with-equipment
+{
+	padding-bottom: 34px;
+	background: transparent url(images/yesno.gif) no-repeat scroll 20px 24px;
+}
+
+/*
+	define mc-type style
+*/
+.mc-type .multiple-choice {
+	padding-left: 3em;
+	margin-left: 0em;
+	border: 0px solid red;
+}
+.multiple-choice .mc
+{
+	list-style-type: upper-alpha;
+	list-style-position: outside;
+	vertical-align: top;
+	margin: 2px 0px;
+}
+.multiple-choice li p
+{
+	display: inline;
+}
+
+.multiple-choice li img,
+.multiple-choice li table
+{
+	vertical-align: middle;
+}
+/* 
+	border must be 1, in order to fix ie6 problem 
+*/
+.multiple-choice .mc .mclist,
+.multiple-choice .mc .mclistkey
+{
+	border: 1px solid #FFFFFF;
+}
+.multiple-choice .mc .showkey
+{
+	margin-left: -3em;
+	padding-left: 3em;
+	background: transparent url(images/answer_key.gif) no-repeat 6px 3px;
+}
+
+/*
+	define open-ended item styles
+*/
+
+.item-body .p-wrap {
+	margin: 0.6em 0px 0.6em 0px;
+}
+.item-body .blank {
+	xmargin-top: 32px;
+}
+.item-body .Material-reference 
+{
+	font-style: italic ;
+}
+
+/* a fix with ie browser and with old legency structure, please don't change this setting */
+.oe-type .question-footer hr {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	margin-right: 10px;
+	padding:12px;  /* ie6 had no effect on padding */
+	border: none;
+	height: 2px;
+  background: transparent repeat top left; 
+	background-image: url(images/addlines.gif);
+	background-position: 0 -3;
+}
+.oe-type .question-part p {
+	margin: 0;
+}
+.oe-type .answer-lines
+{
+	margin-right: 10px;
+	margin-left: 22px;
+	background-color: #ffffff;	
+	padding:0px;
+}
+
+.oe-type .solidline {
+  background: transparent repeat top left; 
+	background-image: url(images/addlines.gif);
+}
+.oe-type .answer-spacing { height: 50px; }
+.oe-type .answer-line0 { height: 1px; font-size: 0pt;} /* need to set font size to 0pt for ie6 */
+.oe-type .answer-line1 { height: 32px; }
+.oe-type .answer-line2 { height: 64px; }
+.oe-type .answer-line3 { height: 96px; }
+.oe-type .answer-line4 { height: 128px; }
+.oe-type .answer-line5 { height: 160px; }
+.oe-type .answer-line6 { height: 192px; }
+.oe-type .answer-line7 { height: 224px; }
+.oe-type .answer-line8 { height: 256px; }
+.oe-type .answer-line9 { height: 288px; }
+.oe-type .answer-line10 { height: 320px; }
+.oe-type .answer-line11 { height: 352px; }
+.oe-type .answer-line12 { height: 384px; }
+.oe-type .answer-line13 { height: 416px; }
+.oe-type .answer-line14 { height: 448px; }
+.oe-type .answer-line15 { height: 480px; }
+.oe-type .answer-line16 { height: 512px; }
+.oe-type .answer-line17 { height: 544px; }
+.oe-type .answer-line18 { height: 576px; }
+.oe-type .answer-line19 { height: 608px; }
+.oe-type .answer-line20 { height: 640px; }
+.oe-type .answer-line21 { height: 672px; }
+.oe-type .answer-line22 { height: 704px; }
+.oe-type .answer-line23 { height: 736px; }
+.oe-type .answer-line24 { height: 768px; }
+.oe-type .answer-line25 { height: 800px; }
+.oe-type .answer-line26 { height: 832px; }
+.oe-type .answer-line27 { height: 864px; }
+.oe-type .answer-line28 { height: 896px; }
+.oe-type .answer-line29 { height: 928px; }
+
+/* student-responss section */
+.student-response-body p 
+{
+	margin: 0.6em 0px;
+}
+.material .header-label 
+{
+	font-weight : bold;
+}
+.oe-response .oe-response-header 
+{
+  display: normal;    /* hide the response header */
+	background-color: #95d2ab;
+	border: 1px solid #59b982;
+	padding: 2px 6px;
+	font-weight: bold;
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+.oe-response .question-stem,
+.oe-response .question-part,
+.oe-response .response-image
+{
+	padding: 0px 0px 0px 22px;
+	margin: 0.6em 0px 0px 0px;
+}
+.oe-response .question-stem
+{
+	border: 0px solid red;
+}
+.oe-response .comment-header {
+	font-weight: bold;
+}
+.oe-response .editorial-comments 
+{
+	background-color: #dcf0e5;
+	border: 1px solid #59b982;
+	padding: 2px 6px;
+	font-size: 1em;
+}
+
+/* scoring guide section */
+.nqt-item-guide
+{
+	margin: 5px 10px;
+	border: 0px solid red;
+}
+.nqt-item-guide-block
+{
+	border: 0px solid blue;
+}
+.nqt-item-guide .guide-solution,
+.nqt-item-guide .guide-description,
+.nqt-item-guide .guide-comments
+{
+	padding: 0px 0px;
+	margin: 5px;
+}
+.nqt-item-guide .guide-body,
+.nqt-item-guide .student-response-body
+{
+	margin: 0.4em 0px 3em 0px;
+}
+.nqt-item-guide .solution-subheader 
+{
+	font-weight: bold;
+}
+.nqt-item-guide .guide-description
+{
+	border: 1px solid #deecff;
+}
+.nqt-item-guide .guide-description .level-header
+{
+	background-color: #deecff;
+	font-weight: bold;
+}
+.nqt-item-guide .guide-description .score-level
+{
+	margin: 0px;
+	border: 0px solid black;
+	border-top: 1px solid #deecff;
+	padding: 0px 0px 0px 3px;
+}
+.nqt-item-guide .guide-description .score-level .sublevel-header
+{
+	font-weight: bold;
+	margin: 0.4em 0px 0.6em 0px;
+}
+.nqt-item-guide .guide-description .score-level .sublevel-details
+{
+	margin: 0.4em 0px 0.6em 0px;
+}
+.nqt-item-guide .guide-body .print-folder-header .question-sequence-header
+{
+	margin: 0.4em 0px 0.6em 0px;
+}
+.nqt-item-guide .guide-body .print-folder-header  .sg-header
+{
+	margin: 0.4em 0px 0.6em 0px;
+	font-weight: bold;
+	background-color: #ccccff;
+}
+.nqt-item-guide .question-sequence-header .label 
+{
+	text-decoration: underline;
+}
+.nqt-item-guide .question-sequence-header .simple-mckey
+{
+	text-decoration: none;
+}
+
+.hideme {
+	display: none;
+	visibility: hidden;
+}
+
+	.nde-chart { margin: 5px 10px; }
+	.nde-chart img { border: 1px #c0c0c0 solid; }
+	.nde-header { margin: 5px 10px;}
+	.nde-header p { margin: 0.3em 0; }
+	.nde-footer { margin: 5px 10px 20px; page-break-after:always;}
+	.nde-footer .nde-footer { page-break-after:auto;}
+	.nde-footer p { margin: 0.3em 0; font-size: 0.9em; }
+	.nqt-moredata { border: 0px solid white; font-size: 12px; font-family: arial; border-collapse: collapse}
+	.nqt-moredata tr { }
+	.nqt-moredata th, .nqt-moredata td { padding: 0px; }
+	.nqt-moredata .colhead { border: 1px solid #ffffff; background-color: #EEEEFF; vertical-align: bottom; color: #0000FF; font-weight: normal; font-size: 10pt; text-align: center }
+	.nqt-moredata .colse {  borderx-left: 1px solid #ffffff; }
+	.nqt-moredata .nde-data { border-left: 1px solid #ffffff; background-color: #E0E0E0; text-align: right}
+	.nqt-moredata .nde-se { border-left: 1px solid #ffffff; background-color: #E0E0E0; text-align: left}
+	.nqt-moredata caption { background-color: #CCCCFF; text-align: left; font-weight: bold; font-size: 9pt;}
+
+	.nqt-moredata .rowhead { background-color: #E0E0E0; text-align:left; white-space: nowrap;}
+	.moredata-fmt2 .VAR { background-color: #EEEEFF; }
+	.moredata-fmt2 .VAR .VAR { display: none; }
+	.moredata-fmt1 .JURIS { background-color: #EEEEFF; }
+	.moredata-fmt1 .JURIS .JURIS { display: none; }
+
+	.nde-table { margin: 5px 10px; }
+	.var-TOTAL .var-TOTAL { display: block; }
+	.var-GENDER .var-GENDER { display: block; }
+	.var-SDRACE .var-SDRACE { display: block; }
+	.var-ORACE4 .var-ORACE4 { display: block; }
+	.var-SCHTYPE .var-SCHTYPE { display: block; }
+	.var-SLUNCH3 .var-SLUNCH3 { display: block; }
+	.var-CENSREG .var-CENSREG { display: block; }
+	.var-TOL31 .var-TOL31 { display: block; }
+	.var-TOL36 .var-TOL36 { display: block; }
+	.var-UTOL4 .var-UTOL4 { display: block; }
+
+	.nde-footer .nde-marker {  }
+	.bit-1 .bit-1 { display: block; }
+	.bit-2 .bit-2 { display: block; }
+	.bit-4 .bit-4 { display: block; }
+	.bit-8 .bit-8 { display: block; }
+	.bit-16 .bit-16 { display: block; }
+	.bit-32 .bit-32 { display: block; }
+	.bit-64 .bit-64 { display: block; }
+	.bit-128 .bit-128 { display: block; }
+	.bit-256 .bit-256 { display: block; }
+	.bit-512 .bit-512 { display: block; }
+
+	#q2003-8M10-8-table td {
+		border: 1px solid black;
+		text-align: left;
+	}
