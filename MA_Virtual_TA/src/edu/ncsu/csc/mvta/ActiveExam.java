@@ -133,6 +133,7 @@ public class ActiveExam extends ExamActivity {
         examService.answerQuestion(answer);
         
         Button nextButton = (Button)this.findViewById(R.id.NextButton);
+       
         // if the exam is complete then button will show results otherwise ask next question
         if(examService.isActiveExam()) {
             nextButton.setOnClickListener(new OnClickListener() {

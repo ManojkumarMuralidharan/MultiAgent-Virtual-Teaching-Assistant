@@ -21,32 +21,39 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int AnswerA=0x7f06000e;
-        public static final int AnswerB=0x7f06000f;
-        public static final int AnswerButton=0x7f060013;
-        public static final int AnswerC=0x7f060010;
-        public static final int AnswerD=0x7f060011;
-        public static final int AnswerE=0x7f060012;
-        public static final int AnswerRadioGroup=0x7f06000d;
+        public static final int AnswerA=0x7f06000f;
+        public static final int AnswerB=0x7f060010;
+        public static final int AnswerButton=0x7f060014;
+        public static final int AnswerC=0x7f060011;
+        public static final int AnswerD=0x7f060012;
+        public static final int AnswerE=0x7f060013;
+        public static final int AnswerRadioGroup=0x7f06000e;
         public static final int AnswersTable=0x7f060001;
         public static final int CorrectAnswer=0x7f060003;
-        public static final int LinearLayout02=0x7f060017;
+        public static final int Emotion_group=0x7f06001c;
+        public static final int LinearLayout02=0x7f060018;
         public static final int NationalAverage=0x7f060005;
         public static final int NextButton=0x7f06000a;
         public static final int QuestionDifficulty=0x7f060006;
-        public static final int QuestionNumber=0x7f06000b;
+        public static final int QuestionNumber=0x7f06000c;
         public static final int QuestionNumberResult=0x7f060000;
-        public static final int QuestionView=0x7f06000c;
-        public static final int QuitExamButton=0x7f060019;
-        public static final int RecentExamHeader=0x7f060016;
-        public static final int RecentExamRow=0x7f060015;
-        public static final int RecentExamsTable=0x7f060014;
-        public static final int StartExamButton=0x7f060018;
+        public static final int QuestionView=0x7f06000d;
+        public static final int QuitExamButton=0x7f06001a;
+        public static final int RadioButton1=0x7f06001d;
+        public static final int RadioButton2=0x7f06001e;
+        public static final int RadioButton3=0x7f06001f;
+        public static final int RadioButton4=0x7f060020;
+        public static final int RecentExamHeader=0x7f060017;
+        public static final int RecentExamRow=0x7f060016;
+        public static final int RecentExamsTable=0x7f060015;
+        public static final int StartExamButton=0x7f060019;
         public static final int StatisticsTable=0x7f060004;
         public static final int StatisticsUnavailable=0x7f060007;
         public static final int TAContent=0x7f060008;
         public static final int TAContentUnavailable=0x7f060009;
         public static final int YourAnswer=0x7f060002;
+        public static final int scrollView1=0x7f06001b;
+        public static final int scrollViewQuestion=0x7f06000b;
     }
     public static final class layout {
         public static final int answer=0x7f030000;
@@ -56,21 +63,25 @@ public final class R {
     }
     public static final class string {
         public static final int activity_local_jade_controller=0x7f050002;
-        public static final int all_msisdn=0x7f05000c;
+        public static final int all_msisdn=0x7f050010;
         public static final int app_name=0x7f050001;
+        public static final int dislike=0x7f05000b;
         public static final int error_msg_connect=0x7f050005;
         /**   ERROR MESSAGES 
          */
         public static final int error_msg_empty_aid=0x7f050003;
         public static final int error_msg_generic=0x7f050006;
         public static final int error_msg_stale_proxy=0x7f050004;
+        public static final int fear=0x7f05000c;
         public static final int hello=0x7f050000;
         /**  JADE CONNECTION PROPERTIES 
          */
-        public static final int host=0x7f050009;
-        public static final int msisdn=0x7f05000b;
+        public static final int host=0x7f05000d;
+        public static final int joy=0x7f05000a;
+        public static final int like=0x7f050009;
+        public static final int msisdn=0x7f05000f;
         public static final int notify_msg_received=0x7f050008;
-        public static final int port=0x7f05000a;
+        public static final int port=0x7f05000e;
         public static final int statusbar_msg_connected=0x7f050007;
     }
 }

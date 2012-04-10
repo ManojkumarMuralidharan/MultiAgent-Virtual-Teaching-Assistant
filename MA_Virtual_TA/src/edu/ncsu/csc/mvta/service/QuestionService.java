@@ -1,5 +1,7 @@
 package edu.ncsu.csc.mvta.service;
 
+import jade.content.ContentElement;
+
 import java.util.ArrayList;
 
 import edu.ncsu.csc.mvta.data.Question;
@@ -75,7 +77,42 @@ public class QuestionService {
     }
     
     /* START STUDENT CODE */
-    
+    public Question randomQuestion(Grade grade,ContentArea content ) {
+    	ArrayList<Question> validQuestions = new ArrayList<Question>();
+    	for(Question q : questions) {
+            if(q.gradeLevel == grade && q.contentArea==content)
+                validQuestions.add(q);
+        }
+    	if(validQuestions.size() == 0)
+            return null;
+        
+        int position = (int)(Math.random() * validQuestions.size());
+    	return validQuestions.get(position);
+    }
+    public Question randomQuestion(Grade grade, Difficulty difficulty, ContentArea content ) {
+    	ArrayList<Question> validQuestions = new ArrayList<Question>();
+    	for(Question q : questions) {
+            if(q.gradeLevel == grade && q.difficulty == difficulty&& q.contentArea==content)
+                validQuestions.add(q);
+        }
+    	if(validQuestions.size() == 0)
+            return null;
+        
+        int position = (int)(Math.random() * validQuestions.size());
+    	return validQuestions.get(position);
+    }
+    public Question randomQuestion(Grade grade) {
+    	ArrayList<Question> validQuestions = new ArrayList<Question>();
+    	for(Question q : questions) {
+            if(q.gradeLevel == grade)
+                validQuestions.add(q);
+        }
+    	if(validQuestions.size() == 0)
+            return null;
+        
+        int position = (int)(Math.random() * validQuestions.size());
+    	return validQuestions.get(position);
+    }
     // add any methods you want to retrieve specific types of questions here
     
     /* END STUDENT CODE */

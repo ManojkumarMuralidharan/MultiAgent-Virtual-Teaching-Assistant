@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="85px">
 
-<!-- 
 
+    <!--
 YOU CAN REMOVE THIS TEXTVIEW AND PLACE ANY UI COMPONENTS YOU WANT INSIDE THIS
 LINEAR LAYOUT.  YOU CAN USE THE OTHER XML FILES FOR EXAMPLES OF GATHERING 
 FEEDBACK LIKE THE RADIO BUTTONS IN QUESTION.XML.
+    -->
 
- -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
 
-    <TextView android:layout_width="fill_parent"
-        android:layout_height="wrap_content" android:text="Configurable Content Here"
-        android:textStyle="bold" android:gravity="center"
-        android:layout_margin="5px" android:paddingTop="5px"/>
+      <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+        <RadioGroup
+        android:id="@+id/Emotion_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <RadioButton android:text="@string/like" android:id="@+id/RadioButton1"/>
+        <RadioButton android:text="@string/joy" android:id="@+id/RadioButton2"/>
+        <RadioButton android:text="@string/dislike" android:id="@+id/RadioButton3"/>
+        <RadioButton android:text="@string/fear" android:id="@+id/RadioButton4"/>
+    	</RadioGroup>
+      
 
-</LinearLayout>
+	</LinearLayout>
+        
+</ScrollView>
+
+

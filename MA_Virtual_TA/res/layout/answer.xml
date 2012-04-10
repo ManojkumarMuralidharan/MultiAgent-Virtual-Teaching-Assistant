@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent" >
+    
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
 
     <TextView android:id="@+id/QuestionNumberResult" android:layout_width="fill_parent"
         android:layout_height="wrap_content" android:text="Question #?? (Result)"
@@ -10,7 +15,7 @@
     
     <View android:layout_height="2dip" android:background="#FF909090" android:layout_width="fill_parent" />
 
-    <TableLayout android:layout_gravity="fill_horizontal" android:layout_width="fill_parent" android:id="@+id/AnswersTable" android:layout_height="50px" android:padding="5px">
+    <TableLayout android:layout_gravity="fill_horizontal" android:layout_width="fill_parent" android:id="@+id/AnswersTable" android:layout_height="100px" android:padding="5px">
         <TableRow android:layout_height="wrap_content" android:layout_gravity="fill_horizontal" android:layout_width="fill_parent">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your Answer:" />
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""
@@ -25,7 +30,7 @@
 
     <View android:layout_height="2dip" android:background="#FF909090" android:layout_width="fill_parent" />
 
-    <TableLayout android:id="@+id/StatisticsTable" android:layout_gravity="fill_horizontal" android:layout_width="fill_parent" android:layout_height="50px" android:padding="5px">
+    <TableLayout android:id="@+id/StatisticsTable" android:layout_gravity="fill_horizontal" android:layout_width="fill_parent" android:layout_height="100px" android:padding="5px">
         <TableRow android:layout_height="wrap_content" android:layout_gravity="fill_horizontal" android:layout_width="fill_parent">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="National Average:" />
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""
@@ -55,3 +60,5 @@
     </LinearLayout>
 
 </LinearLayout>
+    
+</ScrollView>

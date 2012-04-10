@@ -1,6 +1,9 @@
 package edu.ncsu.csc.mvta.service;
 
 
+import jade.core.AID;
+import jade.lang.acl.ACLMessage;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -8,12 +11,16 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
+import java.util.TimerTask;
+
 import edu.ncsu.csc.mvta.data.Answer;
 import edu.ncsu.csc.mvta.data.Exam;
 import edu.ncsu.csc.mvta.data.Question;
 import edu.ncsu.csc.mvta.data.Question.Difficulty;
 import edu.ncsu.csc.mvta.data.Question.Grade;
+import edu.ncsu.csc.mvta.jade.MessageListener;
 import edu.ncsu.csc.mvta.jade.VTAgent;
 import android.app.Service;
 import android.content.Context;
@@ -41,6 +48,7 @@ public class ExamService extends Service {
     private VirtualTA virtualTA = new VirtualTA(this, questionService);
     private VTAgent vtAgetnt ;
 
+    private Context context;
     
     private Exam activeExam;
     
@@ -86,7 +94,8 @@ public class ExamService extends Service {
                 Log.e(LOG_TAG, "Unable to read the exam object from the database", e);
             }
         }
-        
+        if(context!=null)
+        this.setContext(context);
         cursor.close();
     }
     
@@ -140,15 +149,23 @@ public class ExamService extends Service {
     }
     
     public Question getNextQuestion() {
-        
+    	    
     	//Sending message to all other agents
     	//vtAgetnt.sendMessageToAllAgents("Hello All", "ACCEPT-PROPOSAL");
+    	
+    	
+    	//Make your own Questions
+    	
+    	
+    	
+    	//choose between the two Questions
+    	
     	
         if(activeExam == null)
             activeExam = new Exam();
         
         if(activeExam.currentQuestion < TA_QUESTION_COUNT)
-            return virtualTA.nextQuestion();
+            return virtualTA.nextQuestion(this.getContext()); // return the Question
         else
             return generateTestQuestion();
     }
@@ -292,6 +309,14 @@ public class ExamService extends Service {
 
 	public VTAgent getVTAgetnt() {
 		return vtAgetnt;
+	}
+
+	public void setContext(Context context) {
+		this.context = context;
+	}
+
+	public Context getContext() {
+		return context;
 	}
     
     /* START STUDENT CODE */

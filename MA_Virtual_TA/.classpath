@@ -2,11 +2,12 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry exported="true" kind="lib" path="lib/JadeLeapAndroid.jar"/>
-	<classpathentry kind="lib" path="lib/gson-1.3-b2.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate-annotations.jar"/>
-	<classpathentry kind="lib" path="lib/javax-persistence.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Manoj/git/MultiAgent-Virtual-Teaching-Assistant/MA_Virtual_TA/libs/JadeLeapAndroid.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Manoj/git/MultiAgent-Virtual-Teaching-Assistant/MA_Virtual_TA/libs/gson-1.3-b2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Manoj/git/MultiAgent-Virtual-Teaching-Assistant/MA_Virtual_TA/libs/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Manoj/git/MultiAgent-Virtual-Teaching-Assistant/MA_Virtual_TA/libs/javax-persistence.jar"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="lib" path="C:/Users/Manoj/git/MultiAgent-Virtual-Teaching-Assistant/MA_Virtual_TA/libs/koko_a16_client_v02.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
