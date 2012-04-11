@@ -16,6 +16,7 @@ import com.derekandbritt.koko.emotion.EmotionVector;
 
 import android.app.Application;
 import android.content.Context;
+import android.nfc.Tag;
 import android.text.format.Time;
 import android.util.Log;
 import android.view.View;
@@ -53,6 +54,8 @@ public class VirtualTA {
     //private LocationActivity locationActivity;
     private LocationActivity locationActivity;
     private KokoService koko;
+    private boolean remoteQuestionAvailble;
+    private int remoteReceivedId;
     
     /*
      * 
@@ -130,9 +133,11 @@ public class VirtualTA {
 					remoteQuestion=ques_service.randomQuestion(Question.Grade.values()[grade_index], Question.Difficulty.values()[difficulty_index], Question.ContentArea.values()[con_Area_index]);
 				}
 				//Send a message - content Question ID
-				
+				if(remoteQuestion==null){
+					remoteQuestion=ques_service.randomQuestion();
+				}
 				remoteQuestionId.add(remoteQuestion.id);
-				AID senderAID=new AID(message.getSender().getLocalName()+"@192.168.1.120:1097/JADE",true);
+				AID senderAID=new AID(message.getSender().getName(),true);
 				Log.d(LOG_TAG, "Sender name"+message.getSender().getName());
 			    //Send them a question id
 				examService.getVTAgetnt().sendMessage(""+remoteQuestion.id, "INFORM",senderAID);
@@ -156,7 +161,10 @@ public class VirtualTA {
 					int listSize=MessageListener.SuggestedQuestionId.size();
 					if(listSize>0){
 					ACLMessage chosenQuestion=MessageListener.SuggestedQuestionId.get((int)(Math.random()*listSize));
-					Log.d(LOG_TAG, "Chosen Question no. is"+chosenQuestion.getContent());						
+					Log.d(LOG_TAG, "Chosen Question no. is"+chosenQuestion.getContent());
+					setRemoteQuestionAvailble(true);
+					setRemoteReceivedId(Integer.parseInt(chosenQuestion.getContent()));
+					
 					}
 					
 					//
@@ -167,7 +175,7 @@ public class VirtualTA {
 				
 			}
 			
-        	}, 0, 1000);
+        	}, 0, 4000);
         //Initializa GPS
 //        locationActivity.initializeLocation();
         /*
@@ -392,7 +400,31 @@ public class VirtualTA {
    	 		Log.d("Virtual TA", "VirtualTA.JAVA:nextQuestion() Bad question");
    	 		nextQuestion(context);
    	 	}
-   	 		
+   	 	
+   	 	//Check if A remote question is available
+   	 	int num=(int)(Math.random()*10);
+   	 	if(num<6){
+	   	 	if(isRemoteQuestionAvailble())
+	   	 	{
+	   	 	setRemoteQuestionAvailble(false);
+	   	 	setRemoteReceivedId(-1);
+	   	 	}
+   	 	}else{
+	   	 	if(isRemoteQuestionAvailble())
+	   	 	{
+	   	 		setRemoteQuestionAvailble(false);
+	   	 		int remoteQuestionId=getRemoteReceivedId();
+	   	 		setRemoteReceivedId(-1);
+	   	 		Question remoteQuestion = questionService.getQuestion(remoteQuestionId);
+	   	 		if(remoteQuestion!=null){
+	   	 			return remoteQuestion;
+	   	 		}else{
+	   	 			Log.d(LOG_TAG,"The remote question ID turned up null");
+	   	 		}
+	   	 		
+	   	 	}
+   	 	}
+   	 	//Plan to chose or to deny
    	 	
    	 	Question nextQuestion;
    	 	//Grade content difficulty
@@ -790,5 +822,21 @@ public class VirtualTA {
 
 	public KokoService getKoko() {
 		return koko;
+	}
+
+	public void setRemoteQuestionAvailble(boolean remoteQuestionAvailble) {
+		this.remoteQuestionAvailble = remoteQuestionAvailble;
+	}
+
+	public boolean isRemoteQuestionAvailble() {
+		return remoteQuestionAvailble;
+	}
+
+	public void setRemoteReceivedId(int remoteReceivedId) {
+		this.remoteReceivedId = remoteReceivedId;
+	}
+
+	public int getRemoteReceivedId() {
+		return remoteReceivedId;
 	}
 }
